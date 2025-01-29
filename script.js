@@ -28,3 +28,35 @@ function image1Change() {
 function image2Change() {
   img2.src = image2Replacement;
 }
+
+function change() {
+  let typingValue = document.getElementById('text-box').value;
+  let pTag = document.getElementById('pTag');
+  console.log(pTag);
+  pTag.textContent += typingValue;
+  console.log(typingValue);
+}
+
+let display = document.getElementById('countdown');
+let interval;
+display.textContent = 10;
+function startTimer() {
+  let myInterval = setInterval(() => {
+    interval = myInterval;
+    if (display.textContent > 0) {
+      display.textContent -= 1;
+      console.log(typeof display.textContent);
+    } else {
+      clearInterval(myInterval);
+    }
+  }, 1000);
+}
+
+function stopTimer() {
+  clearInterval(interval);
+}
+
+function resetTimer() {
+  clearInterval(interval);
+  display.textContent = 10;
+}
