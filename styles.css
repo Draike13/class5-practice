@@ -33,3 +33,9 @@ body {
   height: 100px;
   width: 100px;
 }
+
+#countdown {
+  margin: 0;
+  font-size: 100px;
+  font-weight: bold;
+}
